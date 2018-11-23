@@ -1,8 +1,10 @@
-Testing redux saga in CRA app
+Testing redux saga in CRA
 
-## Available Scripts
 
-In the project directory, you can run:
+
+## Install
+
+$ npm install
 
 ### `npm start`
 
