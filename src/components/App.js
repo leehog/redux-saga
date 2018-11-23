@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getUsersRequest } from '../actions/users';
+import UserList from './userList'
 
 class App extends Component {
   constructor(props) {
@@ -9,15 +10,16 @@ class App extends Component {
     this.props.getUsersRequest()
   }
   render() {
+    const users = this.props.users
     return (
       <div className="App">
-        test
+        <UserList users={users.items}/>
       </div>
     )
   }
 }
 
-export default connect(null, {
+export default connect(({users}) => ({users}), {
   //Mapdispatchtoprops
   getUsersRequest
 })(App)
